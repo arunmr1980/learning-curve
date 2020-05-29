@@ -1,0 +1,72 @@
+[
+  {
+    "collection_date": "2020-04-06",
+    "collection_by_employees": [
+      {
+        "employee_key": "001574240920851391787DB80E-7757-4B92-8D43-3F3C7EF1D2F8-182663195",
+        "total_amount": 600
+      },
+      {
+        "employee_key": "001574401602217320E4AEA184-A3DF-4F41-A0C5-FC74773ED5A8-277646501",
+        "total_amount": 100
+      }
+    ],
+    "fee_receipts": [
+      "001586196985409223BD5AA177-B886-4929-B33B-84D1BC01EE34-1874754829",
+      "0015861683368095196FF8FF47-7A29-46A5-858B-48BBECBD17D4-1049137187",
+      "001586161364581810AF7D2875-C940-4BB9-BBF9-E4E651CF6DA6-358324860",
+      "0015861623971694211653425D-72EB-4227-8EB2-4040CEFD749B60181321",
+      "0015861982837787540E8AA079-0BA9-48C5-9FA3-AB1C4D3B0E6C1038015603",
+      "001586196580790913C8EBFDF5-D702-475C-BEFA-7D1F6DF52C66543954440",
+      "0015861692800852379F69F9D4-824D-45CB-81CE-0F956DDAB026-298810718"
+    ],
+    "payment_modes": [
+      {
+        "code": "CASH",
+        "total_amount": 600
+      },
+      {
+        "code": "CARD",
+        "total_amount": 100
+      }
+    ],
+    "total_collection_amount": 700,
+    "total_discount_amount": 0,
+    "total_fine_amount": 0
+  },
+  {
+      "collection_date": "2020-05-06",
+      "collection_by_employees": [
+        {
+          "employee_key": "001574240920851391787DB80E-7757-4B92-8D43-3F3C7EF1D2F8-182663195",
+          "total_amount": 600
+        },
+        {
+          "employee_key": "001574401602217320E4AEA184-A3DF-4F41-A0C5-FC74773ED5A8-277646501",
+          "total_amount": 100
+        }
+      ],
+      "fee_receipts": [
+        "001586196985409223BD5AA177-B886-4929-B33B-84D1BC01EE34-1874754829",
+        "0015861683368095196FF8FF47-7A29-46A5-858B-48BBECBD17D4-1049137187",
+        "001586161364581810AF7D2875-C940-4BB9-BBF9-E4E651CF6DA6-358324860",
+        "0015861623971694211653425D-72EB-4227-8EB2-4040CEFD749B60181321",
+        "0015861982837787540E8AA079-0BA9-48C5-9FA3-AB1C4D3B0E6C1038015603",
+        "001586196580790913C8EBFDF5-D702-475C-BEFA-7D1F6DF52C66543954440",
+        "0015861692800852379F69F9D4-824D-45CB-81CE-0F956DDAB026-298810718"
+      ],
+      "payment_modes": [
+        {
+          "code": "CASH",
+          "total_amount": 600
+        },
+        {
+          "code": "CARD",
+          "total_amount": 100
+        }
+      ],
+      "total_collection_amount": 700,
+      "total_discount_amount": 0,
+      "total_fine_amount": 0
+    }
+  ]
