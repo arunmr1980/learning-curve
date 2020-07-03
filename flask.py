@@ -3,7 +3,8 @@ app = Flask(__name__)
 
 @app.route('/hello')
 def hello_world():
-   return render_template('hello.html')
+   x={'numbers':[1,2,3,4]}
+	return jsonify(x)
 
 @app.route('/hai')
 def hai():
