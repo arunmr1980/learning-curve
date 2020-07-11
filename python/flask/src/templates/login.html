@@ -10,8 +10,11 @@
          <label for = "name">UserName</label><br>
          <input type = "text" name = "uname" placeholder = "UserName" /><br>
          <label for = "email">Password</label><br>
-         <input type = "text" name = "uname" placeholder = "Password" /><br>
+         <input type = "text" name = "pswd" placeholder = "Password" /><br>
          <input type = "submit" value = "Submit" />
+         {% if msg %} 
+         <div>{{msg}}</div>
+         {% endif %}
       </form>
 </body>
 </html>
