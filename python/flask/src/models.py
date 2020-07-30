@@ -1,10 +1,22 @@
-from flask import  Flask,render_template,request,redirect,url_for
+
+from flask import  Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_script import Manager 
+from flask_migrate import MigrateCommand,Migrate
 from flask_login import LoginManager,UserMixin,login_required,login_user,logout_user
 from werkzeug.security import generate_password_hash,check_password_hash
 
+
+
+
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////Users/fanish/Desktop/learning-curve/python/flask/src/data.db'
+app.config['SECRET_KEY']='haifanish'
+
 db=SQLAlchemy(app)
+migrate=Migrate(app,db)
+manager=Manager(app)
+manager.add_command('db',MigrateCommand)
 
 class User(UserMixin,db.Model):
 	id=db.Column(db.Integer,primary_key=True)
@@ -24,3 +36,9 @@ class User(UserMixin,db.Model):
 
 	def check_password(self,password):
 		return check_password_hash(self.password,password)
+
+
+
+if __name__ == '__main__':
+   manager.run()
+

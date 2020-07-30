@@ -2,18 +2,13 @@ from flask import  Flask,render_template,request,redirect,url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager,UserMixin,login_required,login_user,logout_user
 from werkzeug.security import generate_password_hash,check_password_hash
-from models import User
-
-
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////Users/fanish/Desktop/learning-curve/python/flask/src/data.db'
-app.config['SECRET_KEY']='haifanish'
+from models import User,app
+from forms import RegistrationForm
 
 db=SQLAlchemy(app)
 login_manager=LoginManager()
 login_manager.init_app(app)
 login_manager.login_view='login'
-
 
 
 @login_manager.user_loader
@@ -60,21 +55,34 @@ def logout():
 	logout_user()
 	return redirect(url_for('login'))
 
-@app.route('/register', methods = ['GET', 'POST'])
+# @app.route('/register', methods = ['GET', 'POST'])
+# def register():
+# 	if request.method == 'POST':
+# 		uname=request.form['uname']
+# 		pswd=request.form['pswd']
+# 		email=request.form['email']
+# 		phone=request.form['phone']
+# 		user=User(uname,pswd,email,phone)
+# 		user.set_password(pswd)
+# 		db.session.add(user)
+# 		db.session.commit()
+# 		# return '<script>window.alert("User Successfully Created"),window.location.href="/login"</script>'
+# 		return redirect(url_for('login'))
+# 	else:
+#    		return render_template('register.html')
+
+@app.route('/register', methods=['GET', 'POST'])
 def register():
-	if request.method == 'POST':
-		uname=request.form['uname']
-		pswd=request.form['pswd']
-		email=request.form['email']
-		phone=request.form['phone']
-		user=User(uname,pswd,email,phone)
-		user.set_password(pswd)
+	form = RegistrationForm(request.form)
+	print(form)
+	if request.method == 'POST' and form.validate():
+		user = User(form.username.data,form.password.data,form.mobile.data,form.email.data)
+		user.set_password(form.password.data)
 		db.session.add(user)
 		db.session.commit()
-		# return '<script>window.alert("User Successfully Created"),window.location.href="/login"</script>'
 		return redirect(url_for('login'))
 	else:
-   		return render_template('register.html')
+		return render_template('register.html', form=form)
 
 
 if __name__ == '__main__':

@@ -6,16 +6,17 @@
 </head>
 <body>
 	<h2>Register</h2>
- <form action = "/register" method = "post">
-         <label for = "name">UserName</label><br>
-         <input type = "text" name = "uname" placeholder = "UserName" /><br>
-         <label for = "email">Password</label><br>
-         <input type = "password" name = "pswd" placeholder = "Password" /><br>
-         <label for = "addr">Email</label><br>
-         <input type = "email" name = "email" placeholder = "Email" /><br>
-         <label for = "addr">Phone</label><br>
-         <input type = "number" name = "phone" placeholder = "Phone" /><br>
-         <input type = "submit" value = "Submit" />
+      <form action="/register" method="post" >
+            {{ csrf_token }} 
+            {{form.username.label}}
+            {{form.username}}<br />
+            {{form.password.label}}
+            {{form.password}}<br />
+            {{form.email.label}}
+            {{form.email}}<br />
+            {{form.mobile.label}}
+            {{form.mobile}}<br />
+      <input type="submit" value="Submit">
       </form>
 </body>
 </html>
