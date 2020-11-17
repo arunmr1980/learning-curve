@@ -50,11 +50,11 @@ public class App
   // }
 
   // public GetExamReportExam_report_keyResult getExamReportExam_report_key(GetExamReportExam_report_keyRequest getExamReportExam_report_keyRequest) {
-  public Empty getExamReport(String reportKey){
+  public StudentReport getExamReport(String reportKey){
     GetExamReportExam_report_keyResult result = sdkClient.getExamReportExam_report_key(
     new GetExamReportExam_report_keyRequest().examReportKey(reportKey)
     );
-    return result.getEmpty();
+    return result.getStudentReport();
   }
 
 

@@ -38,7 +38,7 @@ public class GetExamReportExam_report_keyResultJsonUnmarshaller implements Unmar
             if (token == null)
                 break;
 
-            getExamReportExam_report_keyResult.setEmpty(EmptyJsonUnmarshaller.getInstance().unmarshall(context));
+            getExamReportExam_report_keyResult.setStudentReport(StudentReportJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();
         }
 

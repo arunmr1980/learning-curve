@@ -71,7 +71,7 @@ class ExamReportServiceClient implements ExamReportService {
      * @return Result of the GetExamReportExam_report_key operation returned by the service.
      * @sample ExamReportService.GetExamReportExam_report_key
      * @see <a
-     *      href="http://docs.aws.amazon.com/goto/WebAPI/5g6rbncf2d-2020-11-09T16:35:56Z/GetExamReportExam_report_key"
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/5g6rbncf2d-2020-11-17T12:33:27Z/GetExamReportExam_report_key"
      *      target="_top">AWS API Documentation</a>
      */
     @Override
@@ -90,7 +90,7 @@ class ExamReportServiceClient implements ExamReportService {
      * @param postExamReportClassRequest
      * @return Result of the PostExamReportClass operation returned by the service.
      * @sample ExamReportService.PostExamReportClass
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/5g6rbncf2d-2020-11-09T16:35:56Z/PostExamReportClass"
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/5g6rbncf2d-2020-11-17T12:33:27Z/PostExamReportClass"
      *      target="_top">AWS API Documentation</a>
      */
     @Override
@@ -109,7 +109,7 @@ class ExamReportServiceClient implements ExamReportService {
      * @param postExamReportStudentRequest
      * @return Result of the PostExamReportStudent operation returned by the service.
      * @sample ExamReportService.PostExamReportStudent
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/5g6rbncf2d-2020-11-09T16:35:56Z/PostExamReportStudent"
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/5g6rbncf2d-2020-11-17T12:33:27Z/PostExamReportStudent"
      *      target="_top">AWS API Documentation</a>
      */
     @Override

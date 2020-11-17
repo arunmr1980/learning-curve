@@ -8,37 +8,37 @@ import javax.annotation.Generated;
 
 /**
  * 
- * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/5g6rbncf2d-2020-11-09T16:35:56Z/GetExamReportExam_report_key"
+ * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/5g6rbncf2d-2020-11-17T12:33:27Z/GetExamReportExam_report_key"
  *      target="_top">AWS API Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetExamReportExam_report_keyResult extends com.amazonaws.opensdk.BaseResult implements Serializable, Cloneable {
 
-    private Empty empty;
+    private StudentReport studentReport;
 
     /**
-     * @param empty
+     * @param studentReport
      */
 
-    public void setEmpty(Empty empty) {
-        this.empty = empty;
+    public void setStudentReport(StudentReport studentReport) {
+        this.studentReport = studentReport;
     }
 
     /**
      * @return
      */
 
-    public Empty getEmpty() {
-        return this.empty;
+    public StudentReport getStudentReport() {
+        return this.studentReport;
     }
 
     /**
-     * @param empty
+     * @param studentReport
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public GetExamReportExam_report_keyResult empty(Empty empty) {
-        setEmpty(empty);
+    public GetExamReportExam_report_keyResult studentReport(StudentReport studentReport) {
+        setStudentReport(studentReport);
         return this;
     }
 
@@ -54,8 +54,8 @@ public class GetExamReportExam_report_keyResult extends com.amazonaws.opensdk.Ba
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getEmpty() != null)
-            sb.append("Empty: ").append(getEmpty());
+        if (getStudentReport() != null)
+            sb.append("StudentReport: ").append(getStudentReport());
         sb.append("}");
         return sb.toString();
     }
@@ -70,9 +70,9 @@ public class GetExamReportExam_report_keyResult extends com.amazonaws.opensdk.Ba
         if (obj instanceof GetExamReportExam_report_keyResult == false)
             return false;
         GetExamReportExam_report_keyResult other = (GetExamReportExam_report_keyResult) obj;
-        if (other.getEmpty() == null ^ this.getEmpty() == null)
+        if (other.getStudentReport() == null ^ this.getStudentReport() == null)
             return false;
-        if (other.getEmpty() != null && other.getEmpty().equals(this.getEmpty()) == false)
+        if (other.getStudentReport() != null && other.getStudentReport().equals(this.getStudentReport()) == false)
             return false;
         return true;
     }
@@ -82,7 +82,7 @@ public class GetExamReportExam_report_keyResult extends com.amazonaws.opensdk.Ba
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getEmpty() == null) ? 0 : getEmpty().hashCode());
+        hashCode = prime * hashCode + ((getStudentReport() == null) ? 0 : getStudentReport().hashCode());
         return hashCode;
     }
 

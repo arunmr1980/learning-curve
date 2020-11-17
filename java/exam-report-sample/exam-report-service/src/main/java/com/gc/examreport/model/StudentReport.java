@@ -10,11 +10,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * 
- * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/5g6rbncf2d-2020-11-17T12:33:27Z/StudentReportModel"
- *      target="_top">AWS API Documentation</a>
+ * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/5g6rbncf2d-2020-11-17T12:33:27Z/StudentReport" target="_top">AWS
+ *      API Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class StudentReportModel implements Serializable, Cloneable, StructuredPojo {
+public class StudentReport implements Serializable, Cloneable, StructuredPojo {
 
     private String academicYear;
 
@@ -47,7 +47,7 @@ public class StudentReportModel implements Serializable, Cloneable, StructuredPo
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public StudentReportModel academicYear(String academicYear) {
+    public StudentReport academicYear(String academicYear) {
         setAcademicYear(academicYear);
         return this;
     }
@@ -73,7 +73,7 @@ public class StudentReportModel implements Serializable, Cloneable, StructuredPo
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public StudentReportModel classInfoKey(String classInfoKey) {
+    public StudentReport classInfoKey(String classInfoKey) {
         setClassInfoKey(classInfoKey);
         return this;
     }
@@ -99,7 +99,7 @@ public class StudentReportModel implements Serializable, Cloneable, StructuredPo
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public StudentReportModel division(String division) {
+    public StudentReport division(String division) {
         setDivision(division);
         return this;
     }
@@ -125,7 +125,7 @@ public class StudentReportModel implements Serializable, Cloneable, StructuredPo
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public StudentReportModel schoolKey(String schoolKey) {
+    public StudentReport schoolKey(String schoolKey) {
         setSchoolKey(schoolKey);
         return this;
     }
@@ -151,7 +151,7 @@ public class StudentReportModel implements Serializable, Cloneable, StructuredPo
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public StudentReportModel studentKey(String studentKey) {
+    public StudentReport studentKey(String studentKey) {
         setStudentKey(studentKey);
         return this;
     }
@@ -189,9 +189,9 @@ public class StudentReportModel implements Serializable, Cloneable, StructuredPo
         if (obj == null)
             return false;
 
-        if (obj instanceof StudentReportModel == false)
+        if (obj instanceof StudentReport == false)
             return false;
-        StudentReportModel other = (StudentReportModel) obj;
+        StudentReport other = (StudentReport) obj;
         if (other.getAcademicYear() == null ^ this.getAcademicYear() == null)
             return false;
         if (other.getAcademicYear() != null && other.getAcademicYear().equals(this.getAcademicYear()) == false)
@@ -229,9 +229,9 @@ public class StudentReportModel implements Serializable, Cloneable, StructuredPo
     }
 
     @Override
-    public StudentReportModel clone() {
+    public StudentReport clone() {
         try {
-            return (StudentReportModel) super.clone();
+            return (StudentReport) super.clone();
         } catch (CloneNotSupportedException e) {
             throw new IllegalStateException("Got a CloneNotSupportedException from Object.clone() " + "even though we're Cloneable!", e);
         }
@@ -240,6 +240,6 @@ public class StudentReportModel implements Serializable, Cloneable, StructuredPo
     @com.amazonaws.annotation.SdkInternalApi
     @Override
     public void marshall(ProtocolMarshaller protocolMarshaller) {
-        com.gc.examreport.model.transform.StudentReportModelMarshaller.getInstance().marshall(this, protocolMarshaller);
+        com.gc.examreport.model.transform.StudentReportMarshaller.getInstance().marshall(this, protocolMarshaller);
     }
 }

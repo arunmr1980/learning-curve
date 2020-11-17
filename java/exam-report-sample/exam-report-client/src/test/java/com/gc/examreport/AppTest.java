@@ -36,8 +36,10 @@ public class AppTest extends TestCase
     public void testApp()
     {
         App app = new App();
-        Empty result = app.getExamReport("18");
-        System.out.println(result);
+        StudentReport report = app.getExamReport("18");
+        System.out.println(report);
+        System.out.println("Student Key - " + report.getStudentKey() );
+        
         assertTrue( true );
     }
 }
