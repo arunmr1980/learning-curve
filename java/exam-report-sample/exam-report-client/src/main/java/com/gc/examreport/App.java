@@ -7,7 +7,7 @@ import com.amazonaws.opensdk.config.TimeoutConfiguration;
 
 import com.gc.examreport.*;
 import com.gc.examreport.model.*;
-import com.gc.examreport.ExamReportServiceClient.*;
+// import com.gc.examreport.ExamReportServiceClient.*;
 
 /**
 * Hello world!
@@ -15,7 +15,7 @@ import com.gc.examreport.ExamReportServiceClient.*;
 */
 public class App
 {
-  ExamReportServiceClient sdkClient;
+  ExamReportService sdkClient;
 
   public App() {
     initSdk();
@@ -23,7 +23,7 @@ public class App
 
   // The configuration settings are for illustration purposes and may not be a recommended best practice.
   private void initSdk() {
-    sdkClient = ExamReportServiceClient.builder()
+    sdkClient = ExamReportService.builder()
     .connectionConfiguration(
     new ConnectionConfiguration()
     .maxConnections(100)
@@ -74,7 +74,7 @@ public class App
     // System.out.printf("GET /?a=1&b=2&op=+: %s\n", res.getC());
 
     // Call POST with an Input body.
-    examReportAPI.getExamReport("key");
+    examReportAPI.getExamReport("18");
     // System.out.printf("PUT /\n\n{\"a\":1, \"b\":2,\"op\":\"*\"}\n %s\n", res.getC());
 
 
